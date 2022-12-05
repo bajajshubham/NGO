@@ -1,4 +1,4 @@
-# vedhas
+# NGO website
 
 ## Project setup
 ```

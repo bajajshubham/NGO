@@ -1,4 +1,8 @@
-<template></template>
+<template>
+  <div class="wrapper">
+    <Login />
+  </div>
+</template>
 
 <script>
 import Login from '@/components/Login.vue';
@@ -9,6 +13,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
 </style>

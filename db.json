@@ -20,5 +20,15 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "users": [
+    {
+      "username": "test@abc.com",
+      "password": "Hello"
+    },
+    {
+      "username": "xyz@test.com",
+      "password": "World"
+    }
+  ]
 }

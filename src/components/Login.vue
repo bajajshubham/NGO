@@ -25,10 +25,11 @@
 </template>
 
 <script>
+import { __users__ } from '@/constants';
 import Axios from 'axios'
 export default {
   name: "Login",
-  data() {
+  data() { //default state
     return {
       email: "",
       password: "",
@@ -39,7 +40,7 @@ export default {
       e.preventDefault();
       let loginInfoCorrect = false;
 
-      Axios.get(`http://localhost:5002/users?username=${this.email}`)
+      Axios.get(`${__users__}?username=${this.email}`)
         .then(res => loginInfoCorrect = res.data.length > 0 ? (res.data[0].username === this.email && res.data[0].password === this.password) : false
         )
         .then(() => {

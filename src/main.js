@@ -8,3 +8,4 @@ import "bootstrap/dist/css/bootstrap.css";
 
 const app = createApp(App);
 app.use(store).use(router).mount("#app");
+

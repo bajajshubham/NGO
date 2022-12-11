@@ -1,20 +1,27 @@
 <template>
-  <!-- <div class="loginBox">This is Admin login page</div> -->
-  <i-card style="width: max-content; text-align: start;">
-    <i-form @submit="onSubmit" v-model="form">
-      <i-form-group>
-        <i-form-label>Username</i-form-label>
-        <i-input name="username" placeholder="Enter email address for username" />
-        <i-form-error for="username" />
-      </i-form-group>
-      <i-form-group>
-        <i-form-label>Password</i-form-label>
-        <i-input placeholder="Enter password" type="password" name="password" />
-        <i-form-error for="password" />
-      </i-form-group>
-      <i-button type="submit" color="primary" style="margin-top:10px;">Login</i-button>
-    </i-form>
-  </i-card>
+  <div class="card loginBox shadow rounded">
+    <h5 class="card-header">Sign in</h5>
+    <div class="card-body">
+      <form @submit="onSubmit">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" required v-model="email" id="exampleInputEmail1"
+            aria-describedby="emailHelp" name="username">
+          <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" required name="password" v-model="password" class="form-control"
+            id="exampleInputPassword1">
+        </div>
+        <!-- <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Show password</label>
+        </div> -->
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -23,30 +30,19 @@ export default {
   name: "Login",
   data() {
     return {
-      form: this.$inkline.form({
-        username: {
-          validators: [
-            { name: 'email' }, { name: 'required' }
-          ]
-        },
-        password: {
-          validators: [
-            { name: 'required' }
-          ]
-        }
-      })
+      email: "",
+      password: "",
     };
   },
   methods: {
-    onSubmit() {
+    onSubmit(e) {
+      e.preventDefault();
       let loginInfoCorrect = false;
 
-      Axios.get('http://localhost:5002/users')
-        .then(res => {
-          res.data.map((ele) => {
-            loginInfoCorrect = (ele.username === this.form.username.value && ele.password === this.form.password.value)
-          });
-        }).then(() => {
+      Axios.get(`http://localhost:5002/users?username=${this.email}`)
+        .then(res => loginInfoCorrect = res.data.length > 0 ? (res.data[0].username === this.email && res.data[0].password === this.password) : false
+        )
+        .then(() => {
           if (loginInfoCorrect) {
             this.$router.push("admin")
           } else alert("Incorrect username or password")
@@ -54,12 +50,11 @@ export default {
         .catch(err => { console.log(err.message) })
     }
   }
-}</script>
+}
+</script>
 
 <style scoped>
 .loginBox {
-  border: 1px solid black;
-  width: max-content;
-  padding: 20px;
+  text-align: start;
 }
 </style>

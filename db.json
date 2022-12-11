@@ -1,24 +1,15 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "id": 2,
-      "title": "my own post",
-      "author": "test"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "users": [
+    {
+      "username": "test@abc.com",
+      "password": "Hello"
+    },
+    {
+      "username": "xyz@test.com",
+      "password": "World"
+    }
+  ]
 }

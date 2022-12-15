@@ -1,8 +1,6 @@
 <template>
- <Navbar></Navbar>
- <router-view/>
-
-   
+  <Navbar />
+  <router-view />
 </template>
 
 
@@ -10,10 +8,10 @@
 import Navbar from '@/components/Navbar.vue'
 
 export default {
- components: {
-  Navbar
+  components: {
+    Navbar
 
- }
+  }
 }
 </script>
 
@@ -32,8 +30,8 @@ nav {
   a {
     font-weight: bold;
     color: #1567B1;
-    font-family: 'Work Sans'; 
-  
+    font-family: 'Work Sans';
+
 
     &.router-link-exact-active {
       color: #42b983;

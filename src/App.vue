@@ -28,7 +28,9 @@ nav {
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #1567B1;
+    font-family: 'Work Sans'; 
+  
 
     &.router-link-exact-active {
       color: #42b983;

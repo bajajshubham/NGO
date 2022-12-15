@@ -1,13 +1,17 @@
 <template>
   <h3>Upcoming events</h3>
   <div class="d-flex flex-row">
-    <Event v-for="ev in currEvents" v-if="currEvents.length > 0" v-bind:key="ev.id" :ev="ev" />
+    <span v-if="currEvents.length > 0">
+      <Event v-for="ev in currEvents" v-bind:key="ev.id" :ev="ev" />
+    </span>
     <p v-else>No upcoming events</p>
   </div>
 
   <h3>Past events</h3>
   <div class="d-flex flex-row">
-    <Event v-for="ev in pastEvents" v-if="pastEvents.length > 0" v-bind:key="ev.id" :ev="ev" />
+    <span v-if="pastEvents.length > 0">
+      <Event v-for="ev in pastEvents" v-bind:key="ev.id" :ev="ev" />
+    </span>
     <p v-else>No past events</p>
   </div>
 </template>

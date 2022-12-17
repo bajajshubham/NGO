@@ -1,59 +1,42 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+  <MDBContainer>
+    <div
+      class="d-flex justify-content-center align-items-center"
+      style="height: 100vh"
+    >
+      <div class="text-center">
+        <img
+          class="mb-4"
+          src="https://v1.mdbootstrap.com/wp-content/uploads/2022/11/mdb-sale.png"
+        />
+        <h5 class="mb-4">{{ msg }}</h5>
+        <p class="mb-4 fw-bold">All offers are LIMITED!</p>
+        <a
+          class="btn btn-lg btn-danger fw-bold mb-3"
+          style="background-color: #e70808"
+          href="https://mdbootstrap.com/sale/november/"
+          target="_blank"
+          role="button"
+          >Check insane offers</a
+        >
+        <hr />
+        <p class="mt-4 lead fw-bold">
+          Publish your project with a single command.
+        </p>
+        <p class="mt-2">
+          Use
+          <a href="https://mdbgo.com/" class="fw-bold" target="_blank"
+            ><u>MDB GO</u></a
+          >
+          for a free hosting & deployment tool
+        </p>
+      </div>
+    </div>
+  </MDBContainer>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
-</script>
+<script setup lang="ts">
+import { MDBContainer } from "mdb-vue-ui-kit";
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
+defineProps<{ msg: string }>();
+</script>

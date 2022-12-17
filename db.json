@@ -1,24 +1,94 @@
 {
-  "posts": [
+  "users": [
+    {
+      "username": "test@abc.com",
+      "password": "Hello"
+    },
+    {
+      "username": "xyz@test.com",
+      "password": "World"
+    }
+  ],
+  "events": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "Cleanliness drive",
+      "description": "Ipsum ad eiusmod laborum cillum laboris sunt elit laborum magna. Elit et magna sit cupidatat enim aliquip occaecat sint consectetur cupidatat consequat quis amet quis. Mollit non fugiat Lorem laboris enim excepteur fugiat officia. Quis adipisicing deserunt anim nostrud aute exercitation minim est.",
+      "dateTime": "24 Jan 2023, 7:00AM",
+      "location": "Some location",
+      "activeStatus": true,
+      "image": "https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZWR1Y2F0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "registered": []
     },
     {
       "id": 2,
-      "title": "my own post",
-      "author": "test"
-    }
-  ],
-  "comments": [
+      "title": "Field trip",
+      "description": "Culpa amet velit tempor consequat consectetur labore veniam.",
+      "dateTime": "25 Dec 2022, 6:00PM",
+      "location": "Market yard",
+      "activeStatus": true,
+      "image": "https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZWR1Y2F0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "registered": []
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 3,
+      "title": "Old event",
+      "description": "Ipsum ad eiusmod laborum cillum laboris sunt elit laborum magna. Elit et magna sit cupidatat enim aliquip occaecat sint consectetur cupidatat consequat quis amet quis. Mollit non fugiat Lorem laboris enim excepteur fugiat officia. Quis adipisicing deserunt anim nostrud aute exercitation minim est.",
+      "dateTime": "24 Jan 2022, 7:00AM",
+      "location": "Some location",
+      "activeStatus": false,
+      "image": "https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZWR1Y2F0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "registered": []
+    },
+    {
+      "id": 4,
+      "title": "Old event",
+      "description": "Ipsum ad eiusmod laborum cillum laboris sunt elit laborum magna. Elit et magna sit cupidatat enim aliquip occaecat sint consectetur cupidatat consequat quis amet quis. Mollit non fugiat Lorem laboris enim excepteur fugiat officia. Quis adipisicing deserunt anim nostrud aute exercitation minim est.",
+      "dateTime": "24 Jan 2022, 7:00AM",
+      "location": "Some location",
+      "activeStatus": false,
+      "image": "https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZWR1Y2F0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "registered": []
+    },
+    {
+      "id": 5,
+      "title": "Cleanliness drive",
+      "description": "Ipsum ad eiusmod laborum cillum laboris sunt elit laborum magna. Elit et magna sit cupidatat enim aliquip occaecat sint consectetur cupidatat consequat quis amet quis. Mollit non fugiat Lorem laboris enim excepteur fugiat officia. Quis adipisicing deserunt anim nostrud aute exercitation minim est.",
+      "dateTime": "29 Jan 2023, 7:00AM",
+      "location": "Some location",
+      "activeStatus": true,
+      "image": "https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZWR1Y2F0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "registered": []
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "donations": [
+    {
+      "firstname": "Harsha",
+      "lastname": "Poojari",
+      "email": "seeker.goblet5der@gmail.com",
+      "phone": "017663795334",
+      "address": "Schwetzinger Straße",
+      "city": "Heidelberg",
+      "nation": "India",
+      "amount": "1000",
+      "document": "Passport",
+      "idNumber": "565685",
+      "frequency": "Monthly",
+      "id": 1
+    },
+    {
+      "firstname": "Harsha",
+      "lastname": "Poojari",
+      "email": "seeker.goblet5der@gmail.com",
+      "phone": "017663795334",
+      "address": "Schwetzinger Straße",
+      "city": "Heidelberg",
+      "nation": "",
+      "amount": "12345",
+      "document": "",
+      "idNumber": "",
+      "frequency": "Monthly",
+      "id": 2
+    }
+  ]
 }

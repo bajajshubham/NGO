@@ -1,13 +1,20 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-    <router-link to="/volunteer">Volunteer</router-link>
-  </nav>
-  <router-view/>
+  <Navbar />
+  <router-view />
 </template>
 
-<style lang="scss" scoped>
+<script>
+import Navbar from '@/components/Navbar.vue'
+
+export default {
+  components: {
+    Navbar
+
+  }
+}
+</script>
+
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -21,7 +28,9 @@ nav {
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #1567B1;
+    font-family: 'Work Sans';
+
 
     &.router-link-exact-active {
       color: #42b983;

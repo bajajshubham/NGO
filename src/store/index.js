@@ -1,7 +1,6 @@
 import { createStore } from "vuex";
 import * as url from "@/constants";
 import Axios from "axios";
-// import { fetchDetails } from "../util";
 
 export default createStore({
   state: {

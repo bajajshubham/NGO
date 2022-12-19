@@ -12,14 +12,14 @@
           <router-link class="nav-link active" to="/">Home</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link active" to="/events">Events</router-link>
+          <router-link class="nav-link" to="/events">Events</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link active" to="/volunteer">Join Us</router-link>
+          <router-link class="nav-link" to="/volunteer">Join Us</router-link>
         </li>
        
         <li class="nav-item">
-          <router-link class="nav-link active" to="/donate">Donate</router-link>
+          <router-link class="nav-link" to="/donate">Donate</router-link>
         </li>
         
         <li class="nav-item dropdown">
@@ -51,6 +51,7 @@ export default{
 .navbar navbar-expand-lg {
   font-family: 'Work Sans';
   background: grey;
+  position: fixed;
  
 }
 .navbar-nav{

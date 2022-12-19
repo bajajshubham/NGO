@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Volunteer from '../views/Volunteer.vue'
+import EventView from '../views/EventsView.vue'
+
 
 const routes = [
   {
@@ -14,6 +16,12 @@ const routes = [
     name: 'donate',
     component: () => import(/* webpackChunkName: "donate" */ '../views/DonateView.vue')
   },
+  {
+    path: '/events',
+    name: 'events',
+    component: EventView
+  },
+ 
   {
 
     path: '/login',

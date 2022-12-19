@@ -1,6 +1,7 @@
 import { createStore } from "vuex";
 import * as url from "@/constants";
 import Axios from "axios";
+import { fetchDetails } from "../util";
 
 export default createStore({
   state: {
@@ -27,16 +28,29 @@ export default createStore({
     },
   },
   actions: {
-    getAllEvents(state) {
-      let AllEvents = [];
-      Axios.get(url.__events__)
-        .then((res) => (AllEvents = res.data))
-        .then(() => {
-          if (AllEvents.length > 0) {
-            state.commit("setEvents", AllEvents);
-          }
-        })
-        .catch((err) => console.log(err.message));
+    async getAllEvents(state) {
+      const AllEvents = await fetchDetails(url.__events__);
+      if (AllEvents.length > 0) {
+        state.commit("setEvents", AllEvents);
+      }
+    },
+    async getDonations(state) {
+      let allDonations = await fetchDetails(url.__donations__);
+      if (allDonations.length > 0) {
+        state.commit("setDonations", allDonations);
+      }
+    },
+    async getApplicants(state) {
+      const all = await fetchDetails(url.__applicatiions__);
+      if (all.length > 0) {
+        state.commit("setApplicants", all);
+      }
+    },
+    async getVolunteers(state) {
+      const all = await fetchDetails(url.__applicatiions__);
+      if (all.length > 0) {
+        state.commit("setVolunteers", all);
+      }
     },
     getDonations(state) {
       let allDonations = [];

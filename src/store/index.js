@@ -53,7 +53,7 @@ export default createStore({
       }
     },
     async getVolunteers(state) {
-      const all = await fetchDetails(url.__applicatiions__);
+      const all = await fetchDetails(url.__volunteers__);
       if (all.length > 0) {
         state.commit("setVolunteers", all);
       }

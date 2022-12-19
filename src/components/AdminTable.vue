@@ -7,7 +7,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(item, index) in contents" :key="item.id" @click="onRowClick(item)">
+      <tr class="pointer" v-for="(item, index) in contents" :key="item.id" @click="onRowClick(item)">
         <th scope="row">{{ index + 1 }}</th>
         <td>{{ item.firstname }}</td>
         <td>{{ item.lastname }}</td>
@@ -33,5 +33,7 @@
   emits: ['on-row-click']
 }</script>
 <style>
-
+.pointer {
+  cursor: pointer;
+}
 </style>

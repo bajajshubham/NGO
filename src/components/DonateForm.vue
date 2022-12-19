@@ -93,9 +93,9 @@
     <div class="col-md-2">
       <label for="idtype" class="form-label">ID<span>*</span></label>
       <select id="inputid" v-model="id_doc" class="form-select" required>
-        <option selected>PAN</option>
-        <option>Passport</option>
-        <option>Aadhar Id</option>
+        <option value="pan" selected>PAN</option>
+        <option value="passport">Passport</option>
+        <option value="aadhar">Aadhar Id</option>
       </select>
     </div>
     <div class="col-md-4">
@@ -106,9 +106,10 @@
         v-model="idnumber"
         id="idnumber"
         required
+        
       />
     </div>
-
+    <div class="error" v-if="!isValid">Number is Invalid</div>  
     <div class="col-md-12">
       <label for="donationfrequency" class="form-label"
         >Donation Frequeny<span>*</span></label
@@ -175,6 +176,13 @@ export default {
   name: "DonateForm",
 
   methods: {
+    change:function(e){
+      const number = e.target.value
+      this.isNumberValid(number);
+    },
+    isNumberValid: function(inputNumber) {
+      this.isValid= this.regex.test(inputNumber)
+    },
     onSubmit(e) {
       e.preventDefault();
       const payload = {
@@ -200,6 +208,7 @@ export default {
   },
   data() {
     return {
+        
       fname: "",
       lname: "",
       email: "",
@@ -212,6 +221,8 @@ export default {
       idnumber: "",
       monthlycheck: Boolean,
       aggrementcheckbox: false,
+      isValid: true,
+      regex: /[0-9]/
     };
   },
 };

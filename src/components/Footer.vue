@@ -66,7 +66,9 @@ export default{
 </script>
 <style scoped>
 
-
+.footer-style{
+  margin-top: 50px
+}
 .footer-clean {
   padding:50px 0;
   background-color:black;

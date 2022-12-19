@@ -9,7 +9,7 @@
     <div class="nav justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link class="nav-link active" to="/">Home</router-link>
+          <router-link class="nav-link " to="/">Home</router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/events">Events</router-link>

@@ -3,19 +3,22 @@
     <ImageCarousel />
     <div class="events-style">
   <Events />
+  <Contact />
 </div>
+
   </div>
 </template>
 <script>
 import ImageCarousel from '../components/ImageCarousel.vue'
 import Events from '../components/Events.vue';
-
+import Contact from '../components/Contact.vue'
 
 export default {
   name: "HomeView",
   components: {
     ImageCarousel,
-    Events
+    Events,
+    Contact
   }
 }
 </script>

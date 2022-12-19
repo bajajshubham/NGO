@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="display-events">
     <Events />
   </div>
 </template>
@@ -13,3 +13,13 @@ export default {
   },
 };
 </script>
+<style>
+.display-events{
+    margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Work Sans';
+}
+</style>

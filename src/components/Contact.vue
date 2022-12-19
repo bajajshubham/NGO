@@ -75,7 +75,12 @@ export default {
         "email": this.email,
         "message": this.message
       }
-       Axios.post(__localhost__ + "contact", payload)
+       Axios.post(__localhost__ + "contact", payload).then((res) => {
+        console.log(res)
+        if (res.status === 201) {
+          alert("Thank you for contacting");
+        }
+      }).catch(err => {alert("Something went wrong."); console.log(err.message)});
       }}
 }
 </script>

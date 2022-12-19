@@ -1,7 +1,7 @@
 import { createStore } from "vuex";
 import * as url from "@/constants";
 import Axios from "axios";
-// import { fetchDetails } from "../util";
+import { fetchDetails } from "../util";
 
 export default createStore({
   state: {
@@ -28,60 +28,29 @@ export default createStore({
     },
   },
   actions: {
-    getAllEvents(state) {
-      let AllEvents = [];
-      Axios.get(url.__events__)
-        .then((res) => (AllEvents = res.data))
-        .then(() => {
-          if (AllEvents.length > 0) {
-            state.commit("setEvents", AllEvents);
-          }
-        })
-        .catch((err) => console.log(err.message));
+    async getAllEvents(state) {
+      const AllEvents = await fetchDetails(url.__events__);
+      if (AllEvents.length > 0) {
+        state.commit("setEvents", AllEvents);
+      }
     },
-    getDonations(state) {
-      let allDonations = [];
-      Axios.get(url.__donations__)
-        .then((res) => (allDonations = res.data))
-        .then(() => {
-          if (allDonations.length > 0) {
-            state.commit("setDonations", allDonations);
-          }
-        })
-        .catch((err) => console.log(err.message));
+    async getDonations(state) {
+      let allDonations = await fetchDetails(url.__donations__);
+      if (allDonations.length > 0) {
+        state.commit("setDonations", allDonations);
+      }
     },
-    getApplicants(state) {
-      let all = [];
-      Axios.get(url.__applicatiions__)
-        .then((res) => (all = res.data))
-        .then(() => {
-          if (all.length > 0) {
-            state.commit("setApplicants", all);
-          }
-        })
-        .catch((err) => console.log(err.message));
+    async getApplicants(state) {
+      const all = await fetchDetails(url.__applicatiions__);
+      if (all.length > 0) {
+        state.commit("setApplicants", all);
+      }
     },
-    getApplicants(state) {
-      let all = [];
-      Axios.get(url.__applicatiions__)
-        .then((res) => (all = res.data))
-        .then(() => {
-          if (all.length > 0) {
-            state.commit("setApplicants", all);
-          }
-        })
-        .catch((err) => console.log(err.message));
-    },
-    getVolunteers(state) {
-      let all = [];
-      Axios.get(url.__volunteers__)
-        .then((res) => (all = res.data))
-        .then(() => {
-          if (all.length > 0) {
-            state.commit("setVolunteers", all);
-          }
-        })
-        .catch((err) => console.log(err.message));
+    async getVolunteers(state) {
+      const all = await fetchDetails(url.__applicatiions__);
+      if (all.length > 0) {
+        state.commit("setVolunteers", all);
+      }
     },
   },
   modules: {},

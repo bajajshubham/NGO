@@ -10,6 +10,7 @@ export default createStore({
     allDonations: [],
     allApplicants: [],
     existingVolunteers: [],
+    isLoggedIn: "false",
   },
   getters: {},
   mutations: {
@@ -25,6 +26,11 @@ export default createStore({
     },
     setVolunteers(state, volunteers) {
       state.existingVolunteers = [...volunteers];
+    },
+    setLogin(state) {
+      state.isLoggedIn = sessionStorage.getItem("isLoggedIn")
+        ? sessionStorage.getItem("isLoggedIn")
+        : "false";
     },
   },
   actions: {

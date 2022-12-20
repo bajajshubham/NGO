@@ -145,13 +145,6 @@
       "message": "Test message",
       "id": 2
     }
-  ],
-  "contact": [
-    {
-      "name": "wer",
-      "email": "wer",
-      "message": "wer",
-      "id": 1
-    }
   ]
+  
 }

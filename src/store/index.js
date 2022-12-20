@@ -102,6 +102,50 @@ export default createStore({
         })
         .catch((err) => console.log(err.message));
     },
+    getDonations(state) {
+      let allDonations = [];
+      Axios.get(url.__donations__)
+        .then((res) => (allDonations = res.data))
+        .then(() => {
+          if (allDonations.length > 0) {
+            state.commit("setDonations", allDonations);
+          }
+        })
+        .catch((err) => console.log(err.message));
+    },
+    getApplicants(state) {
+      let all = [];
+      Axios.get(url.__applicatiions__)
+        .then((res) => (all = res.data))
+        .then(() => {
+          if (all.length > 0) {
+            state.commit("setApplicants", all);
+          }
+        })
+        .catch((err) => console.log(err.message));
+    },
+    getApplicants(state) {
+      let all = [];
+      Axios.get(url.__applicatiions__)
+        .then((res) => (all = res.data))
+        .then(() => {
+          if (all.length > 0) {
+            state.commit("setApplicants", all);
+          }
+        })
+        .catch((err) => console.log(err.message));
+    },
+    getVolunteers(state) {
+      let all = [];
+      Axios.get(url.__volunteers__)
+        .then((res) => (all = res.data))
+        .then(() => {
+          if (all.length > 0) {
+            state.commit("setVolunteers", all);
+          }
+        })
+        .catch((err) => console.log(err.message));
+    },
   },
   modules: {},
 });

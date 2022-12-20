@@ -2,11 +2,13 @@
   "users": [
     {
       "username": "test@test.com",
-      "password": "Hello"
+      "password": "Hello",
+      "id": 1
     },
     {
       "username": "xyz@test.com",
-      "password": "World"
+      "password": "World",
+      "id": 2
     }
   ],
   "events": [
@@ -90,7 +92,7 @@
       "frequency": "Monthly",
       "id": 2
     }
-   ],
+  ],
   "applications": [
     {
       "firstname": "John",
@@ -146,5 +148,4 @@
       "id": 2
     }
   ]
-  
 }

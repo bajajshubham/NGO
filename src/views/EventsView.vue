@@ -1,25 +1,25 @@
 <template>
   <div class="display-events">
-    <Contact />
+    <Events />
   </div>
 </template>
-  
+
 <script>
-import Contact from '@/components/Contact.vue';
+import Events from "../components/Events.vue";
 export default {
-  name: "ViewContact",
+  name: "ViewEvents",
   components: {
-    Contact,
+    Events,
   },
 };
 </script>
-
-<style>
-.display-events {
-  font-family: 'Work Sans';
+<style scoped>
+.display-events{
+    margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Work Sans';
 }
 </style>

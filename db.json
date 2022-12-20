@@ -63,30 +63,30 @@
   ],
   "donations": [
     {
-      "firstname": "wer",
-      "lastname": "wert",
-      "email": "wqer@deerftg",
-      "phone": "1234567",
-      "address": "23456",
-      "city": "ertz",
-      "nation": "wert",
-      "amount": "1234",
-      "document": "PAN",
-      "idNumber": "wert",
+      "firstname": "John",
+      "lastname": "Doe",
+      "email": "itachi.uchiha@gmail.com",
+      "phone": "123456345665",
+      "address": "King circle",
+      "city": "Heidelberg",
+      "nation": "Indian",
+      "amount": "1000",
+      "document": "Passport",
+      "idNumber": "565685",
       "frequency": "Monthly",
       "id": 1
     },
     {
-      "firstname": "wer",
-      "lastname": "wert",
-      "email": "wqer@deerftg",
-      "phone": "1234567",
-      "address": "23456",
-      "city": "ertz",
-      "nation": "wert",
-      "amount": "1234",
+      "firstname": "John",
+      "lastname": "Doe",
+      "email": "itachi.uchiha@gmail.com",
+      "phone": "123456345665",
+      "address": "King circle",
+      "city": "Heidelberg",
+      "nation": "Indian",
+      "amount": "12345",
       "document": "PAN",
-      "idNumber": "wert",
+      "idNumber": "ABCDE1234F",
       "frequency": "Monthly",
       "id": 2
     },
@@ -117,6 +117,81 @@
       "idNumber": ".-.##",
       "frequency": "Monthly",
       "id": 4
+    },
+    {
+      "firstname": "Jane",
+      "lastname": "Doe",
+      "email": "jane.doe@gmail.com",
+      "phone": 123456789,
+      "address": "1234 main street",
+      "city": "Mannheim",
+      "nation": "Indian",
+      "amount": "150000",
+      "document": "pan",
+      "idNumber": "ABCDE9874F",
+      "frequency": "",
+      "id": 5
+    },
+    {
+      "firstname": "some",
+      "lastname": "Name",
+      "email": "jjsh@hhd.com",
+      "phone": 455965,
+      "address": "565",
+      "city": "Mannheim",
+      "nation": "Indian",
+      "amount": "550",
+      "document": "aadhar",
+      "idNumber": "254889962366",
+      "frequency": "",
+      "id": 6
+    }
+  ],
+  "applications": [
+    { "id":1,
+      "firstname": "John",
+      "lastname": "Doe",
+      "dob": "01-01-1996",
+      "gender": "male",
+      "email": "itachi.uchiha@gmail.com",
+      "phone": "0021255552",
+      "city": "Heidelberg",
+      "education": "Bachelor of Engineering",
+      "profession": "Student",
+      "hindi": "None",
+      "marathi": "None",
+      "english": "None",
+      "team": "Social",
+      "mode": "Offline",
+      "reference": "Other"
+    }
+  ],
+  "volunteers": [
+    {
+      "firstname": "John",
+      "lastname": "Doe",
+      "dob": "01-01-1996",
+      "gender": "female",
+      "email": "itachi.uchiha@gmail.com",
+      "phone": "123456345665",
+      "city": "Heidelberg",
+      "education": "Bachelor of Engineering",
+      "profession": "Student",
+      "hindi": "None",
+      "marathi": "None",
+      "english": "None",
+      "team": "Teaching",
+      "mode": "Offline",
+      "address": "King circle",
+      "reference": "Other"
+    }
+  ],
+  "contact": [
+    {
+      "name": "wer",
+      "email": "wer",
+      "message": "wer",
+      "id": 1
     }
   ],
   "applications": [
@@ -133,7 +208,7 @@
       "hindi": "None",
       "marathi": "None",
       "english": "None",
-      "team": "Social",
+      "team": "Teaching",
       "mode": "Offline",
       "reference": "Other"
     }

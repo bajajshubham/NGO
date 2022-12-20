@@ -1,17 +1,8 @@
 <template>
-<div class ='volunteer'>
-          <h2><b>Volunteering Process
-          </b></h2>
-          <div class="para">
-          <p>This is a long paragraph written to show how the line-height of an element is affected by our
-            utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be
-            customized as needed with our utility API. >This is a long paragraph written to show how the line-height of an element is affected by our
-            utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be
-            customized as needed with our utility API.</p>
-          </div>
-        </div>
+  <div class='volunteer'>
+    <RegistrationForm />
+  </div>
 
-  <RegistrationForm />
 </template>
 <script>
 import RegistrationForm from "@/components/RegistrationForm.vue";
@@ -23,7 +14,7 @@ export default {
 </script>
 
 <style scoped>
-.volunteer{
+.volunteer {
   margin: 50px;
   display: flex;
   flex-direction: column;
@@ -32,5 +23,4 @@ export default {
   font-family: 'Work Sans';
 
 }
-
 </style>

@@ -13,7 +13,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .display-events{
     margin-top: 100px;
   display: flex;

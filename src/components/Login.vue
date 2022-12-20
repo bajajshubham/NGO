@@ -45,6 +45,8 @@ export default {
         )
         .then(() => {
           if (loginInfoCorrect) {
+            sessionStorage.setItem('isLoggedIn', true)
+            this.$store.commit('setLogin')
             this.$router.push("admin")
           } else alert("Incorrect username or password")
         })

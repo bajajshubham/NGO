@@ -89,7 +89,6 @@
         required
       />
     </div>
-
     <div class="col-md-2">
       <label for="idtype" class="form-label">ID<span>*</span></label>
       <select id="inputid" v-model="id_doc" class="form-select" required>
@@ -155,7 +154,6 @@
         </label>
       </div>
     </div>
-
     <div class="col-12">
       <button
         type="submit"

@@ -9,6 +9,12 @@ const routes = [
   {
     path: '/',
     name: 'home',
+    alias: '/home',
+    component: HomeView
+  },
+  {
+    path: '/events',
+    name: 'events',
     component: HomeView
   },
 
@@ -48,6 +54,11 @@ const routes = [
     path: '/volunteer',
     name: 'volunteer',
     component: Volunteer
+  },
+  {
+    path: '/logout',
+    name: 'logout',
+    component: () => import('../views/Logout.vue')
   },
 ]
 

@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "username": "test@abc.com",
+      "username": "test@test.com",
       "password": "Hello"
     },
     {
@@ -133,7 +133,7 @@
       "hindi": "None",
       "marathi": "None",
       "english": "None",
-      "team": "Teaching",
+      "team": "Social",
       "mode": "Offline",
       "reference": "Other"
     }

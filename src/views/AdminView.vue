@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex flex-row body-container">
-    <div class="admin-body">
+    <div class="admin-body" v-if="!detailPageOpen">
       <Events />
       <Table Heading="Donators" :headRow="donationHeader" :contents="$store.state.allDonations"
         @on-row-click="onDonateRowClick" />
@@ -9,20 +9,35 @@
       <Table Heading="Existing Volunteers" :headRow="volunteerHeader" :contents="$store.state.existingVolunteers"
         @on-row-click="onVolunteersRowClick" />
     </div>
+    <div class="admin-body" v-else>
+      <Donator v-if="openDonate" :donator="donator" @go-back="handleBack" />
+      <Applicant v-if="openApplicant" :applicant="applicant" @go-back="handleBack" />
+      <VolunteerDetail v-if="openVolunteer" :volunteer="volunteer" @go-back="handleBack" />
+    </div>
   </div>
 </template>
 <script>
 import Events from '@/components/Events.vue'
 import Table from '@/components/AdminTable.vue'
+import Donator from '@/components/Donator.vue'
+import Applicant from '../components/Applicant.vue'
+import VolunteerDetail from '@/components/VolunteerDetail.vue'
 
 export default {
   name: "AdminView",
-  components: { Events, Table },
+  components: { Events, Table, Donator, Applicant, VolunteerDetail },
   data() {
     return {
+      detailPageOpen: false,
+      openDonate: false,
+      openApplicant: false,
+      openVolunteer: false,
       donationHeader: ["#", "First name", "Last Name", "Email", "Frequency", "Amount (₹)"],
       applicantHeader: ["#", "First name", "Last Name", "Email", "Education", "Team preference"],
-      volunteerHeader: ["#", "First name", "Last Name", "Email", "Education", "Team"]
+      volunteerHeader: ["#", "First name", "Last Name", "Email", "Education", "Team"],
+      donator: {},
+      applicant: {},
+      volunteer: {},
     }
   },
   created() {
@@ -31,14 +46,41 @@ export default {
     this.$store.dispatch('getVolunteers')
   },
   methods: {
+    handleBack() {
+      this.detailPageOpen = false
+      this.donator = {}
+      this.applicant = {}
+      this.volunteer = {}
+      this.openDonate = false
+      this.openApplicant = false
+      this.openVolunteer = false
+    },
     onDonateRowClick(item) {
-      console.log(`Donate table record: ${item.amount}`)
+      this.donator = { ...item }
+
+      this.openDonate = true
+      this.openApplicant = false
+      this.openVolunteer = false
+
+      this.detailPageOpen = true
     },
     onApplicationsRowClick(item) {
-      console.log(`Applicants table record: ${item.team}`)
+      this.applicant = { ...item }
+
+      this.openDonate = false
+      this.openApplicant = true
+      this.openVolunteer = false
+
+      this.detailPageOpen = true
     },
     onVolunteersRowClick(item) {
-      console.log(`Volunteers table record: ${item.address}`)
+      this.volunteer = { ...item }
+
+      this.openDonate = false
+      this.openApplicant = false
+      this.openVolunteer = true
+
+      this.detailPageOpen = true
     }
   }
 }
@@ -54,6 +96,7 @@ export default {
   text-align: start;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
+  width: -webkit-fill-available;
 }
 </style>

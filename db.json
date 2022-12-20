@@ -232,5 +232,13 @@
       "address": "Schwetzinger Straße",
       "reference": "Other"
     }
+  ],
+  "contact": [
+    {
+      "name": "wer",
+      "email": "wer",
+      "message": "wer",
+      "id": 1
+    }
   ]
 }

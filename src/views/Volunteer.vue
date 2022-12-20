@@ -2,7 +2,6 @@
   <div class='volunteer'>
     <RegistrationForm />
   </div>
-
 </template>
 <script>
 import RegistrationForm from "@/components/RegistrationForm.vue";

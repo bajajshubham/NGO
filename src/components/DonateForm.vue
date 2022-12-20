@@ -15,7 +15,7 @@
     </div>
     <div class="col-md-6">
       <label for="mobile" class="form-label">MobileNumber <span>*</span></label>
-      <input type="text" class="form-control" v-model="phone" id="mobile" required>
+      <input type="number" class="form-control" v-model="phone" id="mobile" required>
     </div>
     <div class="col-12">
       <label for="inputAddress" class="form-label"> Billing Address <span>*</span></label>

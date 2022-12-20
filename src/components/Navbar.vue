@@ -1,60 +1,72 @@
 <template>
-<nav class="navbar navbar-expand-lg bg-light" height="100"  >
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-        <img src="../assets/logo.svg" alt="" width="50" height="46" class="d-inline-block align-text-center" >ADHAYAPANA</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="nav justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <router-link class="nav-link active" to="/">Home</router-link>
+  <nav class="navbar navbar-expand-lg shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand align-text-center" href="#">
+        <img src="../assets/logo.svg" alt="logo" class="logo d-inline-block" /> ADHAYAPANA</a>
+      <div class="nav justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <router-link class="nav-link" to="/">Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/events">Events</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/volunteer">Join Us</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/donate">Donate</router-link>
+          </li>
+          <li class="nav-item">
+          <router-link class="nav-link" to="/contact">Contact Us</router-link>
         </li>
-        <li class="nav-item">
-          <router-link class="nav-link active" to="/events">Events</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link active" to="/volunteer">Join Us</router-link>
-        </li>
-       
-        <li class="nav-item">
-          <router-link class="nav-link active" to="/donate">Donate</router-link>
-        </li>
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Log In
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li> <router-link class="dropdown-item" to="/login">Login</router-link></li>
-            <li><router-link class="dropdown-item" to="/admin">Admin</router-link></li>
-           
-          </ul>
-        </li>
+          <li v-if="$store.state.isLoggedIn === 'true'" class="nav-item dropdown">
+            <router-link class="nav-link" to="/admin">Admin
+              <span id="navbarDropdown" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></span>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><router-link class="nav-link dropdown-item" to="/logout">Logout</router-link></li>
+              </ul>
+            </router-link>
 
-
-         
-       
-      </ul>
+          </li>
+          <li v-else class="nav-item">
+            <router-link class="nav-link" to="/login">Login</router-link>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 </template>
 
 <script>
-export default{
-    name: 'Navbar'
+export default {
+  name: 'Navbar',
+  created() {
+    // sessionStorage.getItem('isLoggedIn')
+  },
+  // beforeUpdate() {
+  //   this.isLoggedIn = sessionStorage.getItem('isLoggedIn')
+  // }
 }
 </script>
 <style scoped>
 .navbar navbar-expand-lg {
+  height: 100px !important;
   font-family: 'Work Sans';
   background: grey;
- 
-}
-.navbar-nav{
-  color: #1567B1;
 }
 
+.shadow {
+  box-shadow: 0px 5px 3px 2px rgb(0 0 0);
+  z-index: 2;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+.navbar-nav {
+  color: #1567B1;
+}
 </style>

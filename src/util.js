@@ -1,14 +1,18 @@
-// import Axios from "axios";
+import Axios from "axios";
 
-// let DATA = [];
+// ===================== for fetching data =================//
+let data = [];
+export const fetchDetails = async (path) => {
+  let response = await extract(path);
+  return data;
+};
 
-// const extract = async (path) => {
-//   const promise = await Axios.get(path)
-//     .then((res) => (DATA = res.data))
-//     .catch((err) => console.log(err.message));
-// };
+const extract = async (path) => {
+  await Axios.get(path)
+    .then((res) => {
+      data = res.data;
+    })
+    .catch((err) => console.log(err.message));
+};
 
-// export const fetchDetails = async (path) => {
-//   await extract(path);
-//   return DATA;
-// };
+//===========================================================//

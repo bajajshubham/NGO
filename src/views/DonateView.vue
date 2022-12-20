@@ -38,43 +38,43 @@ export default {
   components: {
     DonateForm
   },
-  methods: {
-    onSubmit(e) {
-      e.preventDefault()
-      const payload = {
-        "firstname": this.fname,
-        "lastname": this.lname,
-        "email": this.email,
-        "phone": this.phone,
-        "address": this.address,
-        "city": this.city,
-        "nation": this.nation,
-        "amount": this.amount,
-        "document": this.id_doc,
-        "idNumber": this.idnumber,
-        "frequency": !this.monthlycheck ? "One time" : "Monthly"
+  // methods: {
+  //   onSubmit(e) {
+  //     e.preventDefault()
+  //     const payload = {
+  //       "firstname": this.fname,
+  //       "lastname": this.lname,
+  //       "email": this.email,
+  //       "phone": this.phone,
+  //       "address": this.address,
+  //       "city": this.city,
+  //       "nation": this.nation,
+  //       "amount": this.amount,
+  //       "document": this.id_doc,
+  //       "idNumber": this.idnumber,
+  //       "frequency": !this.monthlycheck ? "One time" : "Monthly"
 
-      }
-      //Axios.post(__localhost__ + "donations", payload)
+  //     }
+  //     //Axios.post(__localhost__ + "donations", payload)
 
-    }
-  },
-  data() {
-    return {
-      fname: "",
-      lname: "",
-      email: "",
-      phone: "",
-      address: "",
-      city: "",
-      nation: "",
-      amount: "",
-      id_doc: "",
-      idnumber: "",
-      monthlycheck: Boolean,
-      aggrementcheckbox: false
-    }
-  }
+  //   }
+  // },
+  // data() {
+  //   return {
+  //     fname: "",
+  //     lname: "",
+  //     email: "",
+  //     phone: "",
+  //     address: "",
+  //     city: "",
+  //     nation: "",
+  //     amount: "",
+  //     id_doc: "",
+  //     idnumber: "",
+  //     monthlycheck: Boolean,
+  //     aggrementcheckbox: false
+  //   }
+  // }
 }
 
 

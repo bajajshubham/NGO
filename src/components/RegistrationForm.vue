@@ -1,71 +1,50 @@
 <template>
-  <div class="container pb-2 mb-2">
+  <div class="head-wrap">
+    <h1 class="fw-bold">VOLUNTEER PROCESS</h1>
+    <p1>Decide which causes you care about. Identify the skills and knowledge you
+      can offer. Create a volunteer resume. Determine how often you can volunteer.
+      Research volunteer opportunities in your community. Get all the relevant
+      details for the volunteer position. Apply for the volunteer position. Follow
+      up after you apply. Complete any required training. Begin with a limited
+      commitment.</p1>
+  </div>
+  <h2 class="mt-2 md-3 mb-2">REGISTRATION FORM</h2>
+  <div class="container">
     <div class="position-relative top-0 right-0">
-      <h5 class="mt-2 md-3">Personal Details</h5>
+      <h5 class="mt-2 md-3 mb-2 fw-bold">Personal Details</h5>
     </div>
-    <div v-if="page === 1">
+    <div class="form" v-if="page === 1">
       <div class="mb-3">
         <div class="row">
           <div class="col">
             <label for="firstname" class="form-label">First Name </label>
-            <input
-              id="firstname"
-              type="text"
-              class="form-control"
-              placeholder="First name"
-              aria-label="First name"
-            />
+            <input v-model="firstname" placeholder="firstname" aria-label="first name" class="form-control" />
           </div>
           <div class="col">
-            <label for="lastname" class="form-label">Last Name </label>
-            <input
-              id="lastname"
-              type="text"
-              class="form-control"
-              placeholder="Last name"
-              aria-label="Last name"
-            />
+            <p>Last Name*</p>
+
+            <input v-model="lastname" placeholder="lastname" aria-label="Last name" class="form-control" />
           </div>
         </div>
       </div>
       <div class="mb-3">
         <div class="row">
           <div class="col">
-            <label for="dob" class="form-label">D.O.B</label>
-            <input
-              id="dob"
-              type="date"
-              class="form-control"
-              placeholder="D.O.B"
-              aria-label="First name"
-            />
+            <p>D.O.B*{{}}</p>
+            <input id="dob" type="date" v-model="dob" class="form-control" placeholder="D.O.B" aria-label="dob" />
           </div>
           <div class="col">
-            <label for="gender" class="form-label">Gender</label>
             <div id="gender">
-              <span class="me-4"
-                ><input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
-                  checked
-                />
-                <label class="form-check-label ms-1" for="flexRadioDefault1">
-                  Female
-                </label>
+              <span class="me-4">
+                <div>Gender* {{}}</div>
+                <div class="form-check form-check-inline">
+                  <input type="radio" id="one" value="One" v-model="pickedGender" />
+                  <label for="one">Male</label>
+
+                  <input type="radio" id="two" value="Two" v-model="pickedGender" />
+                  <label for="two">Female</label>
+                </div>
               </span>
-              <span>
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault2"
-                />
-                <label class="form-check-label ms-1" for="flexRadioDefault2">
-                  Male
-                </label></span
-              >
             </div>
           </div>
         </div>
@@ -73,246 +52,150 @@
       <div class="mb-3">
         <div class="row">
           <div class="col">
-            <label for="mobile" class="form-label"> Mobile Number</label>
-            <input
-              id="mobile"
-              type="text"
-              class="form-control"
-              placeholder="10 digit number"
-              aria-label="First name"
-            />
+            <p>Mobile Number*{{}}</p>
+            <input v-model="mobile" placeholder="10 digit number" aria-label="mobile" class="form-control" />
           </div>
           <div class="col">
-            <label for="email" class="form-label">Email </label>
-            <input
-              id="email"
-              type="text"
-              class="form-control"
-              placeholder="Email@gmail.com"
-              aria-label="Last name"
-            />
+            <p>Email*{{}}</p>
+            <input v-model="email" placeholder="email@gmail.com" aria-label="email" class="form-control" />
           </div>
         </div>
       </div>
       <div class="mb-3">
         <div class="row">
           <div class="col">
-            <label for="city" class="form-label">City of Residence </label>
-            <input
-              id="city"
-              type="text"
-              class="form-control"
-              placeholder="City Name"
-              aria-label="First name"
-            />
+            <p>City of residence*{{}}</p>
+            <input v-model="city" placeholder="city" aria-label="city" class="form-control" />
           </div>
           <div class="col">
-            <label for="profession" class="form-label">Profession </label>
-            <input
-              id="profession"
-              type="text"
-              class="form-control"
-              placeholder="Profession"
-              aria-label="Last name"
-            />
+            <p>Education Background*{{}}</p>
+            <input v-model="education" placeholder="education" aria-label="education" class="form-control" />
           </div>
         </div>
       </div>
     </div>
-    <div class="dumbClass" v-else>
+    <div class=" form dumbClass width: 953px; height: 1020px; left: 245px; top: 632px" v-else>
       <div class="row">
-        <label for="firstname" class="form-label">Language profeciency</label>
+        <label for="firstname" class="form-label">Language profeciency*</label>
       </div>
       <div class="row">
         <div class="col"></div>
-        <div class="col">None</div>
-        <div class="col">Elementary</div>
-        <div class="col">Professional</div>
-        <div class="col">Native</div>
+        <div class="col check-center">None</div>
+        <div class="col check-center">Elementary</div>
+        <div class="col check-center">Professional</div>
+        <div class="col check-center">Native</div>
       </div>
       <div class="row">
         <div class="col">Marathi</div>
-        <div class="col">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="marathiRadio"
-            id="marathiRadio1"
-            checked
-          />
+        <div class="col check-center">
+          <input v-bind="marathiLanguage" class="form-check-input" type="radio" name="marathiRadio" id="marathiRadio1"
+            checked />
         </div>
-        <div class="col">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="marathiRadio"
-            id="marathiRadio2"
-          />
+        <div class="col check-center">
+          <input class="form-check-input" type="radio" name="marathiRadio" id="marathiRadio2" />
         </div>
-        <div class="col">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="marathiRadio"
-            id="marathiRadio3"
-          />
+        <div class="col check-center">
+          <input class="form-check-input" type="radio" name="marathiRadio" id="marathiRadio3" />
         </div>
-        <div class="col">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="marathiRadio"
-            id="marathiRadio4"
-          />
+        <div class="col check-center">
+          <input class="form-check-input" type="radio" name="marathiRadio" id="marathiRadio4" />
         </div>
       </div>
       <div class="row">
         <div class="col">Hindi</div>
-        <div class="col">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="HindiRadio"
-            id="HindiRadio1"
-            checked
-          />
+        <div class="col check-center">
+          <input v-bind="hindiLanguage" class="form-check-input" type="radio" name="HindiRadio" id="HindiRadio1"
+            checked />
         </div>
-        <div class="col">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="HindiRadio"
-            id="HindiRadio2"
-          />
+        <div class="col check-center">
+          <input class="form-check-input" type="radio" name="HindiRadio" id="HindiRadio2" />
         </div>
-        <div class="col">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="HindiRadio"
-            id="HindiRadio3"
-          />
+        <div class="col check-center">
+          <input class="form-check-input" type="radio" name="HindiRadio" id="HindiRadio3" />
         </div>
-        <div class="col">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="HindiRadio"
-            id="HindiRadio4"
-          />
+        <div class="col check-center">
+          <input class="form-check-input" type="radio" name="HindiRadio" id="HindiRadio4" />
         </div>
       </div>
       <div class="row">
         <div class="col">English</div>
-        <div class="col">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="Englishradio"
-            id="Englishradio1"
-            checked
-          />
+        <div class="col check-center">
+          <input v-bind="englishLanguage" class="form-check-input" type="radio" name="Englishradio" id="Englishradio1"
+            checked />
         </div>
-        <div class="col">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="Englishradio"
-            id="Englishradio2"
-          />
+        <div class="col check-center">
+          <input class="form-check-input" type="radio" name="Englishradio" id="Englishradio2" />
         </div>
-        <div class="col">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="Englishradio"
-            id="Englishradio3"
-          />
+        <div class="col check-center">
+          <input class="form-check-input" type="radio" name="Englishradio" id="Englishradio3" />
         </div>
-        <div class="col">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="Englishradio"
-            id="Englishradio4"
-          />
+        <div class="col check-center">
+          <input class="form-check-input" type="radio" name="Englishradio" id="Englishradio4" />
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="dropdown">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Team prefrence
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Teaching</a></li>
-              <li><a class="dropdown-item" href="#">Operational</a></li>
-              <li><a class="dropdown-item" href="#">Social media</a></li>
-            </ul>
-          </div>
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <div>Team Preference* {{}}</div>
+
+          <select v-model="selectedTeam">
+            <option disabled value="">Please select one</option>
+            <option>Teaching</option>
+            <option>Operational</option>
+            <option>Social Media</option>
+          </select>
         </div>
-        <div class="col">
-          <div class="dropdown">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Mode of Teaching
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Offline</a></li>
-              <li><a class="dropdown-item" href="#">Online</a></li>
-              <li><a class="dropdown-item" href="#">Hybrid</a></li>
-            </ul>
+
+        <div class="col-md-6">
+          <div>Mode of Teaching* {{}}</div>
+
+          <select v-model="selectedMode">
+            <option disabled value="">Please select one</option>
+            <option>Offline</option>
+            <option>Online</option>
+            <option>Hybrid</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mt-4 md-4">
+        <div>How you know about us?</div>
+        <div class="col-md-3">
+          <div class="form-check">
+            <input v-model="pickedReference" class="form-check-input" type="radio" name="flexRadioDefault"
+              id="flexRadioDefault1" />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Social media
+            </label>
+          </div>
+          <div class="form-check">
+            <input v-model="pickedReference" class="form-check-input" type="radio" name="flexRadioDefault"
+              id="flexRadioDefault2" checked />
+            <label class="form-check-label" for="flexRadioDefault2">
+              Friends
+            </label>
+          </div>
+          <div class="form-check">
+            <input v-model="pickedReference" class="form-check-input" type="radio" name="flexRadioDefault"
+              id="flexRadioDefault3" />
+            <label class="form-check-label" for="flexRadioDefault3">
+              Website
+            </label>
+          </div>
+          <div class="form-check">
+            <input v-model="pickedReference" class="form-check-input" type="radio" name="flexRadioDefault"
+              id="flexRadioDefault4" checked />
+            <label class="form-check-label" for="flexRadioDefault4">
+              Others
+            </label>
           </div>
         </div>
       </div>
-      <div class="row">How you know about us?</div>
-      <div class="col"><div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-  <label class="form-check-label" for="flexRadioDefault1">
-    Social media
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-  <label class="form-check-label" for="flexRadioDefault2">
-    Friends
-  </label>
-</div></div>
-<div class="col"><div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-  <label class="form-check-label" for="flexRadioDefault1">
-    Website
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-  <label class="form-check-label" for="flexRadioDefault2">
-    Others
-  </label>
-</div></div>
     </div>
 
     <div class="pager">
-      <button
-        type="button"
-        class="btn btn-secondary"
-        @click="pageDown"
-        :disabled="page === 1"
-      >
+      <button type="button" class="btn btn-secondary" @click="pageDown" :disabled="page === 1">
         Prev
       </button>
-      <button type="button" class="btn btn-primary" @click="pageUp">
+      <button type="page === 2 ? 'submit' : 'button'" class="btn btn-primary" @click="pageUp">
         {{ page === 2 ? "Submit" : "Next" }}
       </button>
     </div>
@@ -322,13 +205,31 @@
 </template>
 
 <script>
+import Axios from "axios";
+import { __localhost__ } from "@/constants";
+
 export default {
   name: "RegisrtrationForm",
   data() {
     return {
+      dob: "",
+      firstname: "",
+      lastname: "",
+      mobile: "",
+      email: "",
+      city: "",
+      education: "",
       page: 1,
+      selectedTeam: "",
+      selectedMode: "",
+      pickedReference: "",
+      pickedGender: "",
+      marathiLanguage: "",
+      hindiLanguage: "",
+      englishLanguage: "",
     };
   },
+
   methods: {
     pageDown() {
       if (this.page > 1) {
@@ -339,7 +240,28 @@ export default {
       if (this.page < 2) {
         this.page++;
       } else if (this.page === 2) {
-        console.log("Submitted");
+        const payload = {
+          firstname: this.firstname,
+          dob: this.dob,
+          lastname: this.lastname,
+          mobile: this.mobile,
+          email: this.email,
+          city: this.city,
+          education: this.education,
+          selectedTeam: this.selectedTeam,
+          selectedMode: this.selectedMode,
+          pickedReference: this.pickedReference,
+          pickedGender: this.pickedGender,
+          marathiLanguage: this.marathiLanguage,
+          hindiLanguage: this.hindiLanguage,
+          englishLanguage: this.englishLanguage,
+        };
+        Axios.post(__localhost__ + "applications", payload).then((res) => {
+          console.log(res)
+          if (res.status === 201) {
+            alert("Your application is submitted");
+          }
+        }).catch(err => { alert("Something went wrong."); console.log(err.message) });
       }
     },
   },
@@ -348,37 +270,38 @@ export default {
 
 <style scoped>
 .container {
-  border: 1px solid #d9d9d9;
-  left: 356px;
-  top: 251px;
+  border: 2px solid #d9d9d9;
+
   border-radius: 2px;
+  width: 750px;
+  height: 460px;
+  left: 241px;
+  top: 189px;
 }
 
-.form-text {
-  margin-bottom: 0.5rem;
-  font-size: null;
-  font-style: null;
-  font-weight: null;
+.form {
+  text-align: start;
 }
-.input- {
-  font-family: Open Sans;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 20px;
-  position: absolute;
-  background: #d9d9d9c2;
-}
-.form-horizontal .control-label {
-  text-align: left;
-}
+
 .mb-3 {
   margin-left: (spacer * 0.25) !important;
 }
+
 .pager {
   display: flex;
   justify-content: space-between;
 }
-.dumbClass {
-  border: 1px solid red;
+
+.form-check-label {
+  text-align-last: left;
+}
+
+.head-wrap {
+  margin: 10px 300px;
+}
+
+.check-center {
+  text-align: center;
+  padding: 0;
 }
 </style>

@@ -45,7 +45,6 @@
       <label for="idnumber" class="form-label">ID Number<span>*</span></label>
       <input type="text" class="form-control" v-model="idnumber" id="idnumber" required />
     </div>
-    <div class="error" v-if="!isValid">Number is Invalid</div>  
     <div class="col-md-12">
       <label for="donationfrequency" class="form-label">Donation Frequency<span>*</span></label>
       <div>

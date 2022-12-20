@@ -45,7 +45,7 @@
       <label for="idnumber" class="form-label">ID Number<span>*</span></label>
       <input type="text" class="form-control" v-model="idnumber" id="idnumber" required />
     </div>
-
+    <div class="error" v-if="!isValid">Number is Invalid</div>  
     <div class="col-md-12">
       <label for="donationfrequency" class="form-label">Donation Frequency<span>*</span></label>
       <div>
@@ -119,7 +119,6 @@ export default {
         idNumber: this.idnumber,
         frequency: this.frequency2 === 'on' ? 'Monthly' : 'One time'
       };
-
       Axios.post(__localhost__ + "donations", payload).then((res) => {
         console.log(res)
         if (res.status === 201) {

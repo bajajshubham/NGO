@@ -14,10 +14,12 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/volunteer">Join Us</router-link>
           </li>
-
           <li class="nav-item">
             <router-link class="nav-link" to="/donate">Donate</router-link>
           </li>
+          <li class="nav-item">
+          <router-link class="nav-link" to="/contact">Contact Us</router-link>
+        </li>
           <li v-if="$store.state.isLoggedIn === 'true'" class="nav-item dropdown">
             <router-link class="nav-link" to="/admin">Admin
               <span id="navbarDropdown" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></span>

@@ -17,7 +17,7 @@
       <div class="mb-3">
         <div class="row">
           <div class="col">
-            <p>First Name*{{}}</p>
+            <label for="firstname"  class="form-label">First Name </label>
             <input
               v-model="firstname"
               placeholder="firstname"

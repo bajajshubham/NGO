@@ -89,81 +89,26 @@
       "idNumber": "ABCDE1234F",
       "frequency": "Monthly",
       "id": 2
-    },
-    {
-      "firstname": "qwer",
-      "lastname": "wer",
-      "email": "wer@wert",
-      "phone": "2345",
-      "address": "edrft",
-      "city": "ert",
-      "nation": "ert",
-      "amount": "2345",
-      "document": "pan",
-      "idNumber": "qwertr",
-      "frequency": "Monthly",
-      "id": 3
-    },
-    {
-      "firstname": "qwer",
-      "lastname": "wer",
-      "email": "wer@wert",
-      "phone": "2345",
-      "address": "edrft",
-      "city": "ert",
-      "nation": "ert",
-      "amount": "2345",
-      "document": "pan",
-      "idNumber": ".-.##",
-      "frequency": "Monthly",
-      "id": 4
-    },
-    {
-      "firstname": "Jane",
-      "lastname": "Doe",
-      "email": "jane.doe@gmail.com",
-      "phone": 123456789,
-      "address": "1234 main street",
-      "city": "Mannheim",
-      "nation": "Indian",
-      "amount": "150000",
-      "document": "pan",
-      "idNumber": "ABCDE9874F",
-      "frequency": "",
-      "id": 5
-    },
-    {
-      "firstname": "some",
-      "lastname": "Name",
-      "email": "jjsh@hhd.com",
-      "phone": 455965,
-      "address": "565",
-      "city": "Mannheim",
-      "nation": "Indian",
-      "amount": "550",
-      "document": "aadhar",
-      "idNumber": "254889962366",
-      "frequency": "",
-      "id": 6
     }
-  ],
+   ],
   "applications": [
-    { "id":1,
+    {
       "firstname": "John",
       "lastname": "Doe",
       "dob": "01-01-1996",
       "gender": "male",
-      "email": "itachi.uchiha@gmail.com",
-      "phone": "0021255552",
+      "email": "John.doe@google.com",
+      "phone": "123456789026",
       "city": "Heidelberg",
       "education": "Bachelor of Engineering",
       "profession": "Student",
       "hindi": "None",
       "marathi": "None",
       "english": "None",
-      "team": "Social",
+      "team": "Teaching",
       "mode": "Offline",
-      "reference": "Other"
+      "reference": "Other",
+      "id": 1
     }
   ],
   "volunteers": [
@@ -171,9 +116,9 @@
       "firstname": "John",
       "lastname": "Doe",
       "dob": "01-01-1996",
-      "gender": "female",
-      "email": "itachi.uchiha@gmail.com",
-      "phone": "123456345665",
+      "gender": "male",
+      "email": "John.doe@google.com",
+      "phone": "123456789026",
       "city": "Heidelberg",
       "education": "Bachelor of Engineering",
       "profession": "Student",
@@ -182,8 +127,9 @@
       "english": "None",
       "team": "Teaching",
       "mode": "Offline",
-      "address": "King circle",
-      "reference": "Other"
+      "address": "Mannheim Straße",
+      "reference": "Other",
+      "id": 1
     }
   ],
   "contact": [
@@ -192,53 +138,12 @@
       "email": "wer",
       "message": "wer",
       "id": 1
-    }
-  ],
-  "applications": [
+    },
     {
-      "firstname": "Harsha",
-      "lastname": "Poojari",
-      "dob": "01-01-1996",
-      "gender": "female",
-      "email": "seeker.goblet5der@gmail.com",
-      "phone": "017663795334",
-      "city": "Heidelberg",
-      "education": "Bachelor of Engineering",
-      "profession": "Student",
-      "hindi": "None",
-      "marathi": "None",
-      "english": "None",
-      "team": "Teaching",
-      "mode": "Offline",
-      "reference": "Other"
-    }
-  ],
-  "volunteers": [
-    {
-      "firstname": "Harsha",
-      "lastname": "Poojari",
-      "dob": "01-01-1996",
-      "gender": "female",
-      "email": "seeker.goblet5der@gmail.com",
-      "phone": "017663795334",
-      "city": "Heidelberg",
-      "education": "Bachelor of Engineering",
-      "profession": "Student",
-      "hindi": "None",
-      "marathi": "None",
-      "english": "None",
-      "team": "Teaching",
-      "mode": "Offline",
-      "address": "Schwetzinger Straße",
-      "reference": "Other"
-    }
-  ],
-  "contact": [
-    {
-      "name": "wer",
-      "email": "wer",
-      "message": "wer",
-      "id": 1
+      "name": "john",
+      "email": "doe",
+      "message": "Test message",
+      "id": 2
     }
   ]
 }

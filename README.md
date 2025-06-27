@@ -1,4 +1,7 @@
-# NGO website
+# NGO website - Adhyapana
+Website for an NGO based in Nashik, India. Built using Vue.js.
+
+## Demonstration
 
 ## Project setup
 ```
